@@ -3,6 +3,7 @@ let timerId;
 
 const startButton = document.getElementById('start')
 startButton.addEventListener('click', function() {
+    clearInterval(timerId);
     timerId = setInterval(updateClock, 1000);
 });
 
@@ -10,6 +11,7 @@ startButton.addEventListener('click', function() {
 const stopButton = document.getElementById('stop')
 stopButton.addEventListener('click', function () {
     clearInterval(timerId);
+    timerId = null;
 });
 
 
